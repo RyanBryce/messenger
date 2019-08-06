@@ -10,7 +10,7 @@ defmodule Messenger.Schema.Schema do
   alias Messenger.Resolver.{
     Message
   }
-  alias Messenger.Accounts
+  alias Messenger.{ Accounts, Twilio }
 
   query do
     @desc "get all users "
@@ -66,6 +66,15 @@ defmodule Messenger.Schema.Schema do
       arg :user_id, :id
 
       resolve &Message.create_message/3
+    end
+
+    @desc "creates a twilio message"
+    field :send_whatsapp_sms, :twilio do
+      arg :to, :string
+      arg :from, :string
+      arg :body, :string
+
+      resolve &Twilio.create_whatsapp_sms/3
     end
 
   end

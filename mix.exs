@@ -46,7 +46,8 @@ defmodule Messenger.MixProject do
       {:absinthe, "~> 1.4.2"},
       {:absinthe_plug, "~> 1.4.0"},
       {:absinthe_phoenix, "~> 1.4.0"},
-      {:poison, "~> 2.1.0"},
+      {:poison, "~> 3.0"},
+      {:ex_twilio, "~> 0.7.0"}
     ]
   end
 

@@ -15,4 +15,11 @@ defmodule Messenger.Schema.Types do
     field :body, :string
     field :author, :user
   end
+
+  object :twilio do
+    field :to, :string
+    field :from, :string
+    field :body, :string
+  end
+
 end
